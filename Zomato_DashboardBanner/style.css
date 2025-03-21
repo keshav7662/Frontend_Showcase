@@ -1,0 +1,78 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  width: 100%;
+  height: 400px;
+  position: relative;
+}
+.banner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.banner .info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.banner .info .details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+.banner .info .details h1 {
+  font-size: 45px;
+  color: #fff;
+  font-style: italic;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.banner .info .details h2 {
+  letter-spacing: 1.2px;
+  margin-bottom: 20px;
+}
+.banner .info .details .search-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.banner .info .details .search-menu .location-logo {
+  color: #ff3d00;
+}
+.banner .info .details .search-menu .search-logo {
+  color: #ff3d00;
+}
+.banner .info .details .search-menu select {
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  background: transparent;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+}
+.banner .info .details .search-menu .vertical-border {
+  height: 30px;
+  border-right: 1.5px solid #ddd;
+}
+.banner .info .details .search-menu input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}/*# sourceMappingURL=style.css.map */

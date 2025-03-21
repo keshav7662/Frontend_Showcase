@@ -1,0 +1,67 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.card {
+  width: 370px;
+  padding: 10px;
+  margin: 20px auto;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 20px;
+}
+.card .img-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.card .img-container img {
+  width: 100%;
+  border-radius: 20px;
+}
+.card .img-container .discount {
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .img-container .discount h3 {
+  background-color: rgb(48, 138, 241);
+  color: #fff;
+  padding: 5px 20px;
+}
+.card .img-container .discount p {
+  position: absolute;
+  background-color: #d7d4d4;
+  color: #171717;
+  padding: 8px;
+  border-radius: 8px;
+  right: 10px;
+  font-weight: bold;
+}
+.card .info .address {
+  padding: 20px 0px;
+}
+.card .info .address p {
+  color: grey;
+  font-size: 18px;
+}
+.card .info .terms {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border-top: 1.5px solid rgb(223, 219, 219);
+}
+.card .info .terms p {
+  color: grey;
+}
+.card .info .terms .logo {
+  width: 60px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=style.css.map */

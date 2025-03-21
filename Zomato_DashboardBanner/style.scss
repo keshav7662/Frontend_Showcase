@@ -1,0 +1,89 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    width: 100%;
+    height: 400px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .info {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+
+        .details {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+
+            h1 {
+                font-size: 45px;
+                color: #fff;
+                font-style: italic;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                letter-spacing: 1.2px;
+                margin-bottom: 20px;
+            }
+
+            .search-menu {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background: #fff;
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+
+                .location-logo {
+                    color: #ff3d00
+                }
+
+                .search-logo {
+                    color: #ff3d00;
+                }
+
+                select {
+                    padding: 8px;
+                    border: none;
+                    font-size: 16px;
+                    background: transparent;
+                    color: #333;
+                    outline: none;
+                    cursor: pointer;
+
+                }
+
+                .vertical-border {
+                    height: 30px;
+                    border-right: 1.5px solid #ddd;
+                }
+
+                input {
+                    flex: 1;
+                    padding: 8px;
+                    border: none;
+                    font-size: 16px;
+                    outline: none;
+                }
+            }
+        }
+    }
+}
