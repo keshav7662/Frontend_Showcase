@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -9,10 +10,11 @@ body {
     width: 100%;
     height: 100%;
     background-color: #0E0E0E;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 html {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: clamp(16px, 1vw, 20px);
 }
 
 header {
@@ -23,23 +25,54 @@ header {
     border: 1px solid rgb(61, 61, 61);
     padding: 0.8rem;
     background-color: #1D1E1F;
+    z-index: 100;
+
     nav {
         display: flex;
+        justify-content: space-between;
         gap: 1rem;
         align-items: center;
         color: #DAC5A7;
         font-weight: 400;
         font-size: 1rem;
         cursor: pointer;
+        position: relative;
+
+
+        i {
+            display: none;
+        }
+
         a {
+            position: relative;
             text-transform: uppercase;
             letter-spacing: 1.2px;
+            padding: 0.3rem 0;
+
+            &::after {
+                content: "";
+                position: absolute;
+                background-color: #DAC5A7;
+                height: 3px;
+                width: 0;
+                left: 0;
+                bottom: 0;
+                transition: 0.5s;
+
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
         }
+
         h1 {
             font-size: 1.8rem;
             font-weight: 100;
-            margin-right: 1rem;
+            margin: 0rem 1rem;
         }
+
         button {
             background-color: #EDD6B6;
             color: #1D1E1F;
@@ -54,15 +87,348 @@ header {
     }
 }
 
-section {
+main {
+    padding: 1.2rem;
+    color: #DAC5A7;
+}
+
+
+.image-section {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 3%;
-    color: #DAC5A7;
+    text-align: center;
 
     img {
         width: 40%;
+        object-fit: cover;
+    }
+
+    .overlay-content {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+
+
+        h1 {
+            font-size: 9.5rem;
+            font-weight: 100;
+            line-height: 0.8;
+
+            .italic {
+                font-family: 'Times New Roman', serif;
+                font-size: 8rem;
+                font-weight: 100;
+            }
+        }
+
+        p {
+            font-size: 1.8rem;
+            text-transform: capitalize;
+            color: #d0ac79;
+            font-weight: 100;
+
+            br {
+                display: block;
+            }
+        }
+
+    }
+}
+
+.services-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    color: #DAC5A7;
+    margin-top: 2rem;
+    transition: 1s;
+
+    i {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.5px solid #464440;
+        border-radius: 50%;
+        padding: 1rem;
+        transition: 0.5s;
+        background-color: #23211E;
+    }
+
+    p {
+        font-size: 1.2rem;
+        font-weight: 300;
+        text-transform: uppercase;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        i {
+            border: 0.5px solid #DAC5A7;
+        }
+    }
+
+}
+
+.marquee-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #DAC5A7;
+    padding: 4rem 5rem;
+
+    .marquee-container {
+        display: flex;
+        width: 60%;
+        overflow: hidden;
+        position: relative;
+        white-space: nowrap;
+
+        &::before {
+            content: '';
+            height: 100%;
+            width: 50%;
+            background-image: linear-gradient(to right, #0E0E0E, transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        &::after {
+            content: '';
+            height: 100%;
+            width: 50%;
+            background-image: linear-gradient(to left, #0E0E0E, transparent);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 3rem;
+            padding: 0 1.5rem;
+            align-items: center;
+            animation: marquee 10s linear infinite both;
+
+            p {
+                font-size: 2rem;
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.info-card-container {
+    display: flex;
+    gap: 1.5rem;
+
+    .card {
+        padding: 3rem 2rem;
+        border: 1px solid #343330;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        font-weight: 100;
+        background-color: #181716;
+        color: wheat;
+        font-size: 1.2rem;
+
+        h1,
+        h2 {
+            font-weight: 100;
+        }
+
+        .redirect-btn {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            i {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                padding: 0.8rem;
+                border: 1px solid #343330;
+                border-radius: 50%;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                cursor: pointer;
+
+                i {
+                    rotate: 45deg;
+                    border: 1px solid #7b7665;
+                    background-color: #292725;
+
+                }
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@media(max-width:767px) {
+    header {
+        position: fixed;
+        top: 3rem;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid rgb(61, 61, 61);
+        padding: 0.5rem;
+        width: 90%;
+        background-color: #1D1E1F;
+        opacity: 90%;
+        z-index: 100;
+
+        nav {
+            width: 100%;
+
+            i {
+                display: flex;
+                font-size: 1.5rem;
+            }
+
+            a {
+                display: none;
+            }
+
+            button {
+                background-color: #EDD6B6;
+                color: #1D1E1F;
+                border: none;
+                border-radius: 0.1rem;
+                font-size: 1.1rem;
+                font-weight: 300;
+                cursor: pointer;
+                margin-left: 0.6rem;
+            }
+        }
+
+    }
+
+    .image-section {
+
+        img {
+            width: 80%;
+            object-fit: cover;
+            position: sticky;
+            top: 0;
+        }
+
+        .overlay-content {
+            width: 100%;
+            position: sticky;
+            top: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+
+
+            h1 {
+                font-size: 4.2rem;
+                font-weight: 100;
+                line-height: 1;
+
+                .italic {
+                    font-family: 'Times New Roman', serif;
+                    font-size: 3.2rem;
+                    font-weight: 100;
+                }
+            }
+
+            p {
+                font-size: 1.1rem;
+                text-transform: capitalize;
+                letter-spacing: 1.1px;
+                color: #d0ac79;
+                font-weight: 100;
+                line-height: 1.3;
+
+                br {
+                    display: none;
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+    .marquee-section {
+        padding: 2rem 1rem;
+        margin: 2rem auto;
+
+        .marquee-container {
+            width: 100%;
+        }
+    }
+
+    .info-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        .card {
+            padding: 1.5rem 2rem;
+            border: 1px solid #343330;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            font-weight: 100;
+            background-color: #181716;
+            color: wheat;
+            font-size: 1rem;
+
+            h1,
+            h2 {
+                font-weight: 100;
+            }
+
+            .redirect-btn {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+
+                i {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    padding: 0.8rem;
+                    border: 1px solid #343330;
+                    border-radius: 50%;
+                }
+
+                &:hover {
+                    i {
+                        rotate: 0deg;
+                    }
+                }
+            }
+        }
     }
 }
