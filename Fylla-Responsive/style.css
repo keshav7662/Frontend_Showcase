@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+body {
+  background-color: #FDFBF5;
+  padding: 1rem;
+}
+
+main {
+  border: 1px solid black;
+  padding: 2rem 1.5rem;
+}
+
+nav {
+  padding-bottom: 2rem;
+  border-bottom: 1.5px solid black;
+}
+nav .navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .navContainer .logo {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav .navContainer .logo svg {
+  width: 3.2rem;
+  aspect-ratio: 1/1;
+}
+nav .navContainer .logo h1 {
+  font-family: "Syne", sans-serif;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  font-size: 1.5rem;
+  color: #151414;
+}
+nav .navContainer .service-btns {
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav .navContainer .service-btns .links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+nav .navContainer .service-btns .links a {
+  font-weight: 100;
+  color: #151515;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+nav .navContainer .service-btns .dropdown select {
+  font-weight: 100;
+  color: #151515;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+nav .navContainer .service-btns button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #000;
+  color: #e9e7c0;
+  padding: 0.5rem 1rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+  cursor: pointer;
+}
+nav .navContainer .service-btns .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav .navContainer .service-btns .socials a {
+  font-weight: 100;
+  color: #151515;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+nav .navContainer .service-btns .dark-mode-btn {
+  padding: 0.6rem 1rem;
+  padding-right: 2rem;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 40px;
+  cursor: pointer;
+}
+nav .navContainer .service-btns .line {
+  display: block;
+  width: 1.5px;
+  height: 2rem;
+  background-color: #000;
+}
+nav .navContainer .service-btns .burger {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.view-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.view-1 p {
+  font-weight: 100;
+  color: #151515;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+.view-1 h1 {
+  font-size: 4.2rem;
+  font-family: "Syne", sans-serif;
+  font-weight: 500;
+  width: 60%;
+  line-height: 100%;
+  color: #151414;
+}
+.view-1 img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1.2rem;
+}
+
+.view-2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+.view-2 .top {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view-2 .top .text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.view-2 .top .text p {
+  font-weight: 100;
+  color: #151515;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+}
+.view-2 .top .text h1 {
+  font-size: 3.5rem;
+  font-family: "Syne", sans-serif;
+  font-weight: 300;
+  line-height: 100%;
+}
+.view-2 .top button {
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #000;
+  color: #e9e7c0;
+  padding: 0.5rem 1rem;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+  cursor: pointer;
+}
+.view-2 .line {
+  height: 1px;
+  background-color: #151414;
+}
+.view-2 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-2 .bottom .ideas {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.view-2 .bottom .ideas svg {
+  width: 4rem;
+}
+.view-2 .bottom .ideas h1 {
+  font-weight: 100;
+  color: #151515;
+  font-family: "Roboto Mono", monospace;
+  letter-spacing: 1px;
+  font-size: 1.1rem;
+  font-family: "Syne", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.view-2 .bottom .ideas p {
+  font-family: "Satoshi", "Satoshi Placeholder", sans-serif;
+  line-height: 1.5;
+  color: #535252;
+}
+
+@media (max-width: 1250px) {
+  nav .links a {
+    display: none;
+  }
+  nav .links select {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  nav .navContainer .service-btns .line {
+    display: none;
+  }
+  nav .navContainer .service-btns button {
+    display: none;
+  }
+  nav .navContainer .service-btns .socials {
+    display: none;
+  }
+}
+@media (min-width: 1020px) {
+  main {
+    padding: 2rem 3rem;
+  }
+  nav .navContainer .service-btns .burger {
+    display: none;
+  }
+  .view-1 h1 {
+    width: 100%;
+    font-size: 6rem;
+  }
+  .view-2 {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .view-2 .top {
+    width: 60%;
+    justify-content: space-between;
+  }
+  .view-2 .top .text h1 {
+    font-size: 5rem;
+    font-weight: 500;
+  }
+  .view-2 .line {
+    width: 1px;
+    height: initial;
+  }
+  .view-2 .bottom {
+    width: 30%;
+  }
+  .view-2 .bottom .line {
+    height: 1px;
+    width: initial;
+  }
+}
